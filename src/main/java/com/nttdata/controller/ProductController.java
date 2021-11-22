@@ -98,14 +98,5 @@ public class ProductController {
 	}
 	
 	
-	@DeleteMapping("/{id}")
-	public Mono<ResponseEntity<Void>> delete(@PathVariable("id") String id){
-		return service.findById(id)				
-				.flatMap(p -> {
-					return service.delete(p.getId())
-							.then(Mono.just(new ResponseEntity<Void>(HttpStatus.NO_CONTENT)));					
-				})
-				.defaultIfEmpty(new ResponseEntity<Void>(HttpStatus.NOT_FOUND));
-	}
 
 }
