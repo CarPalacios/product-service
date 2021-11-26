@@ -5,11 +5,7 @@ import com.nttdata.repository.ProductRepository;
 import com.nttdata.repository.Repository;
 import com.nttdata.service.ProductService;
 
-import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
-import reactor.core.publisher.Mono;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.stereotype.Service;
 
 
